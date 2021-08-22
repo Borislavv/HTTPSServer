@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"github.com/Borislavv/HTTPSServer/Cert"
 )
 
 func main() {
@@ -18,7 +19,6 @@ func main() {
 	if len(domains) == 0 {
 		log.Fatalf("Specify domains as arguments!")
 	}
-
 
 	certManager := autocert.Manager{
 		Prompt:     autocert.AcceptTOS,
